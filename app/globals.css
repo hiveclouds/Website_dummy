@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --rose: #e11d74;
+  --rose-light: #fb7fb7;
+  --rose-pale: #fce7f3;
+  --rose-dark: #9d1557;
+  --cream: #fff8f9;
+  --charcoal: #1a0a12;
+  --warm-gray: #4a3340;
+  --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --font-body: 'DM Sans', system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #0e0610;
+  color: white;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #1a0a12; }
+::-webkit-scrollbar-thumb { background: var(--rose); border-radius: 3px; }
+
+@keyframes ribbonFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(1.8); opacity: 0; }
+}
+
+.animate-fade-up { animation: fadeUp 0.8s ease forwards; }
+.animate-float { animation: float 4s ease-in-out infinite; }
+
+.ribbon-gradient {
+  background: linear-gradient(270deg, #e11d74, #fb7fb7, #9d1557, #e11d74);
+  background-size: 300% 300%;
+  animation: ribbonFlow 6s ease infinite;
+}
+
+.glass {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.glass-dark {
+  background: rgba(26,10,18,0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #e11d74, #fb7fb7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(225,29,116,0.2);
+}
+
+.font-display { font-family: var(--font-display); }
+.font-body { font-family: var(--font-body); }
