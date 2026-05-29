@@ -1,6 +1,6 @@
-# 🎀 Indonesian Cancer Society — Website Modern
+# 🎀 Indonesian Cancer Society — Website Dummy
 
-Website resmi Indonesian Cancer Society yang dibangun ulang dengan **Next.js 15**, **Tailwind CSS**, dan **TypeScript**. Siap deploy ke Vercel.
+Website dummy untuk Indonesian Cancer Society yang dibangun ulang dengan **Next.js 15**, **Tailwind CSS**, dan **TypeScript**. Siap deploy ke Vercel.
 
 ----
 
